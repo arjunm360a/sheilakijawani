@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Codes</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'https://fonts.cdnfonts.com/css/sf-pro-display', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        /* Main container to hold both text and logo */
+        .container {
+            display: flex; /* Align items side by side */
+            justify-content: space-between; /* Space between text and logo */
+            align-items: center; /* Vertically center align */
+            padding: 40px; /* Space around the content */
+            max-width: 1200px; /* Maximum width of the container */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+        /* Text container */
+        .text-section {
+            flex: 1; /* Allow text section to take up available space */
+            max-width: 60%; /* Max width to limit text spread */
+        }
+
+        /* Heading for pain points */
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        /* Style for pain points list */
+        ul {
+            list-style-type: disc; /* Bullet points for list */
+            padding-left: 20px; /* Space between bullets and text */
+        }
+
+        /* Style for each pain point item */
+        li {
+            font-size: 18px;
+            line-height: 1.6; /* Line spacing for readability */
+            color: #333;
+            margin-bottom: 10px; /* Space between list items */
+        }
+
+        /* Logo container */
+        .logo-section {
+            flex: 0 0 30%; /* Fixed size for logo section, no shrink or grow */
+            display: flex;
+            justify-content: center; /* Center the logo horizontally */
+            align-items: center; /* Center the logo vertically */
+            background-color: #333; /* Background for the logo */
+            padding: 2px; /* Padding around the logo */
+            border-radius: 20px; /* Rounded corners */
+            margin-bottom: 40px; /* Added margin to increase space below */
+        }
+
+        /* Image inside the logo section */
+        .logo-section img {
+            width: 100%; /* Logo takes up full width of the container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Styles for Brief and Problem Statement */
+        .container-2, .container, .container-3 {
+            opacity: 0; /* Initial opacity */
+            transition: opacity 0.5s ease-in-out; /* Smooth transition */
+        }
+
+        /* Add this class when the content is visible */
+        .container-2.visible, .container.visible, .container-3.visible {
+            opacity: 1; /* Full opacity when visible */
+        }
+
+        .container-2 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 40px;
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        .left {
+            flex: 0 1 auto;
+        }
+
+        .logo {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .right {
+            flex: 1;
+            padding-left: 90px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        h2 {
+            font-size: 38px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 2;
+        }
+
+        /* Solutions section */
+        .container-3 {
+            background-color: #f2d14b;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 3000px;
+            margin: 40px auto;
+            border-radius: 10px;
+        }
+
+        .text-section-3 {
+            flex: 9;
+            padding-right: 50px;
+        }
+
+        h3 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .image-section {
+            flex: 0 0 30%;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .finisher {
+            position: relative;
+            left: 90px;
+            top: 70px;
+            height: 1087px;
+            width: 1308px;
+        }
+
+        .gobackboi {
+            position: relative;
+            left: -600px;
+            top: 400px;
+            width: 118px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gobackboi:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        .footer {
+            height: 50px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            padding: 10px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .empty-space {
+            height: 800px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container-2">
+        <div class="left">
+            <img src="C:\Users\manuk\OneDrive\Desktop\Website Sahya Sarige\Group 1.png" alt="Sahaya Saarige Logo" class="logo">
+        </div>
+        <div class="right">
+            <h2>Brief</h2>
+            <p>Make a service around day to day problems you face.</p>
+            <h2>Problem Statement</h2>
+            <p>Lack of awareness among decision-makers and potential beneficiaries about the services offered by homeless shelters in Bengaluru is leading to underutilization of these resources, resulting in unmet needs within the homeless population.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="text-section">
+            <h1>Pain Points</h1>
+            <ul>
+                <li>Rapid Night Surveys which are conducted every 15 days, are not very effective in convincing the homeless to join a shelter and are unsafe for the caregivers.</li>
+                <li>There is a big lack of trust from the end of the homeless people. The majority are reluctant for help as they are scared and unsure.</li>
+                <li>There is also a huge lack of awareness from the end of the homeless people. Majority of them do not know there are services and people ready to help.</li>
+            </ul>
+        </div>
+
+        <div class="logo-section">
+            <img src="C:\Users\manuk\OneDrive\Desktop\Website Sahya Sarige\kan logo.png" alt="Sahaya Saarige Logo">
+        </div>
+    </div>
+
+    <div class="container-3">
+        <div class="text-section-3">
+            <h3>Solutions</h3>
+            <ul>
+                <li>To address these challenges, we propose an innovative solution: a Mobile Homeless Shelter Bus.</li>
+                <li>This initiative aims to bring essential services directly to homeless individuals, wherever they may be.</li>
+                <li>By providing a safe, mobile shelter, access to food, clothing, and healthcare, and opportunities for counseling and support, the mobile shelter bus can help bridge the gap between homeless populations and the resources they need.</li>
+            </ul>
+        </div>
+
+        <div class="image-section">
+            <img src="C:\Users\manuk\OneDrive\Desktop\Website Sahya Sarige\speechimg.png" alt="Solutions Image">
+        </div>
+    </div>
+
+    <img src="C:\Users\manuk\OneDrive\Desktop\Website Sahya Sarige\combo.png" class="finisher" alt="">
+
+    <a href="C:\Users\manuk\OneDrive\Desktop\Coding stuff\website\homepage.html">
+        <img src="C:\Users\manuk\OneDrive\Desktop\Website Sahya Sarige\arow.png" class="gobackboi" alt="Click to go to another page">
+    </a>
+
+    <div class="empty-space"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return rect.top >= 0 && rect.bottom <= window.innerHeight;
+            }
+
+            const sections = document.querySelectorAll('.container-2, .container, .container-3');
+
+            window.addEventListener('scroll', function() {
+                sections.forEach(function(section) {
+                    if (isInViewport(section)) {
+                        section.classList.add('visible');
+                    }
+                });
+            });
+
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+
+</body>
+</html>

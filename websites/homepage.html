@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">     
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Navbar with Hover Effect</title>
+  <style>
+    /* Your existing CSS code here */
+  </style>
+  <script>
+    function showPopup() {
+      alert("Lets get in touch!!");
+    }
+  </script>
+</head>
+<body>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">     
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Navbar with Hover Effect</title>
+  <style>
+    /* Enable smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+  background-color: #232323;
+  height: 98px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0; /* Position at the top of the viewport */
+  width: 100%; /* Make sure it spans the full width */
+  z-index: 1000; /* Ensures the navbar stays on top of other elements */
+}
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      width: 1300px; 
+    }
+
+    .nav-links a {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      height: 2px;
+      background-color: #ecd551;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      transform-origin: center;
+    }
+
+    .nav-links a:hover {
+      color: #ecd551;
+    }
+
+    .nav-links a:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    .hello-text {
+      position: absolute;
+      top: 240px;
+      left: 850px;
+      right: 0px;
+      font-size: 190px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #232323;
+      line-height: 1px;
+      font-family: 'SF Pro Display 500', sans-serif;
+    }
+
+    .hello-text span {
+      color: #ecd551;
+    }
+
+    .intro-text {
+      position: absolute;
+      top: 350px;
+      left: 880px;
+      right: 5px;
+      font-size: 25px;
+      color: #232323;
+      line-height: 1.5;
+      font-family: 'SF Pro Display 500', sans-serif;
+    }
+
+    .intro-text span {
+      color: #ecd551;
+    }
+
+    .hobbies-text {
+      position: absolute;
+      top: 680px; 
+      left: 1020px;
+      right: 0px;
+      font-size: 70px;
+      font-weight: bold;
+      color: #232323;
+      font-family: 'SF Pro Display 500', sans-serif;
+    }
+
+    .hobbies-text span {
+      color: #ecd551;
+    }
+
+    .Software {
+      position: absolute;
+      letter-spacing: 2px;
+      top: 1400px; 
+      left: 990px;
+      right: 0px;
+      font-size: 70px;
+      font-weight: bold;
+      color: #232323;
+      font-family: 'SF Pro Display 500', sans-serif;
+    }
+
+    .Software span {
+      color: #ecd551;
+    }
+
+    /* Add four equally spaced squares */
+    .software-squares {
+      position: absolute;
+      top: 1470px; /* Position below the Software section */
+      left: 870px;
+      right: 0px;
+      display: flex;
+      justify-content: space-between;
+      width: 600px;
+    }
+
+    .software-square:hover {
+      transform: scale(1.05);
+    }
+
+    .software-square {
+      width: 110px;
+      height: 110px; /* Square dimensions */
+      background-color: #232323;
+      top: 50px;
+      border-radius: 10px;
+      position: relative;
+      transition: all 0.5s ease;
+      
+    }
+
+    /* Existing rectangles */
+    .rectangles {
+      position: absolute; 
+      top: 830px; 
+      left: 870px; 
+      right: 0px;
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-between;
+      width: 600px; 
+    }
+
+    .rectangle {
+      width: 170px; 
+      height: 250px; 
+      background-color: #232323;
+      border-radius: 15px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .rectangle img {
+      position: absolute;
+      width: 150px;
+      height: auto;
+    }
+
+    .line {
+      width: 100%; /* Full width */
+      height: 14px; /* Control the height here */
+      background-color: #232323;
+      position: absolute;
+      top: 1750px;  /* Control the distance from the top */
+      bottom: auto;  /* Control the distance from the bottom */
+    }
+
+    .line2 {
+      width: 100%; /* Full width */
+      height: 5px; /* Control the height here */
+      background-color: #232323;
+      position: absolute;
+      top: 1770px;  /* Control the distance from the top */
+      bottom: auto;  /* Control the distance from the bottom */
+    }
+
+    /* Projects Section */
+    .projects-text {
+      position: absolute;
+      top: 1820px; 
+      left: 98px;
+      right: 0px;
+      font-size: 90px;
+      font-weight: bold;
+      color: #232323;
+      font-family: 'SF Pro Display 500', sans-serif;
+    }
+
+    .projects-text span {
+      color: #ecd551;
+    }
+
+    /* Text styling inside each rectangle */
+    .rectangle-text {
+      position: absolute;
+      top: 10px; /* Adjust the top position */
+      left: 10px; /* Adjust to left align the text */
+      color: white;
+      font-family: 'SF Pro Display 500', sans-serif;
+      font-size: 11px; /* Adjust the font size */
+      line-height: 1.5;
+      max-width: 140px; /* Ensure the text fits within the rectangle */
+      text-align: left;
+    }
+
+    /* Bold specific words */
+    .bold-text {
+      
+      font-weight: bold;
+      font-size: large;
+    }
+
+    .rectangle:hover img {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }  
+
+
+    /* Customizable gap and position properties for boxes */
+    .project-boxes {
+      position: absolute;
+      top: 1950px; /* Adjust to position below Projects section */
+      left: 450px; /* Position from left side */
+      width: 600px; /* Adjust width */
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; /* Align items at the top */
+      gap: 50px; /* Default horizontal gap */
+    }
+
+    .project-boxes .box {
+      width: 170px;
+      height: 170px;
+      background-color: #232323;
+      border-radius: 15px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .project-boxes .stacked-boxes {
+      display: flex;
+      flex-direction: column;
+      gap: 5px; /* Default vertical gap */
+    }
+
+    .project-boxes .stacked-boxes .box {
+      width: 170px;
+      height: 170px;
+      gap: 50px; /* Adjust height for stacked layout */
+    }
+
+
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      width: 1300px; 
+    }
+
+    .nav-links a {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      height: 2px;
+      background-color: #ecd551;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      transform-origin: center;
+    }
+
+    .nav-links a:hover {
+      color: #ecd551;
+    }
+
+    .nav-links a:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    .projects-text {
+      position: absolute;
+      top: 1820px; 
+      left: 98px;
+      right: 0px;
+      font-size: 90px;
+      font-weight: bold;
+      color: #232323;
+      font-family: 'SF Pro Display 500', sans-serif;
+    }
+
+    .projects-text span {
+      color: #ecd551;
+    }
+
+    /* Flexbox for rows of boxes */
+    .projects-boxes {
+      position: absolute;
+      top: 1990px;  /* Adjust position as needed */
+      left: 250px;
+      right: 0px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 70px;  /* Control the gap between boxes */
+    }
+
+    .project-box {
+      display: flex;
+      justify-content: center;  /* Centers horizontally */
+      align-items: center;  /* Centers vertically */
+      width: 320px;
+      height: 250px;
+      background-color: #232323;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      
+    }
+
+    .project-box img {
+      max-width: 110%;  /* Ensures the image scales within the box */
+      max-height: 110%;  /* Ensures the image scales within the box */
+      object-fit: contain;  /* Ensures the whole image fits without cropping */
+      border-radius: 10px;  /* Optional: matches the box border radius */
+    }
+
+    /* Add text inside the box */
+    .box-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: 'SF Pro Display 500', sans-serif;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    /* Add hover effect */
+    .project-box:hover {
+      transform: scale(1.05);
+    }
+
+    .line {
+      width: 100%; /* Full width */
+      height: 14px;
+      background-color: #232323;
+      position: absolute;
+      top: 1750px;
+      bottom: auto;
+    }
+
+    .line2 {
+      width: 100%; /* Full width */
+      height: 5px;
+      background-color: #232323;
+      position: absolute;
+      top: 1770px;
+    }
+    
+    .line3 {
+      width: 100%; /* Full width */
+      height: 14px;
+      background-color: #ecd551;
+      position: absolute;
+      top: 2700px;
+      bottom: auto;
+      z-index: 2;
+    }
+
+    .line4 {
+      width: 100%; /* Full width */
+      height: 5px;
+      background-color: #ecd551;
+      position: absolute;
+      top: 2720px;
+      z-index: 2;
+    }
+
+    .tigres {
+      position: relative;
+      left: 50px;
+      top: 380px;
+      height: 1300px;
+      width: 690px;
+    }
+
+    .bottom-box {
+      background-color: #232323;  /* Background color */
+      height: 800px;  /* Adjustable height */
+      width: 100%;  /* Full width */
+      position: absolute;  /* Positioned relative to the entire page */
+      top: 2702px;  /* Adjust based on your page content */
+      bottom: 0;
+      z-index: 1; /* Lower z-index to place it behind lines */
+    }
+
+    .form-container {
+    background-color:transparent;
+    font-family:'SF Pro Display 500', sans-serif;
+    padding: 90px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;  /* Add this */
+    top: 2830px; /* Adjust to place the form container above the black box */
+    left: 1190px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+
+        .form-title {
+            font-size: 44px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .form-title span {
+            color: #ecd551;
+        }
+
+        .liner {
+            border: none;
+            border-bottom: 2px solid #000;
+            width: 80%;
+            margin: 15px auto;
+            outline: none;
+            text-align: center;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            border: none;
+            outline: none;
+            color: white;
+            font-family:'SF Pro Display 500', sans-serif;
+            width: 80%;
+            margin: 15px auto;
+            text-align: center;
+            font-size: 19px;
+            border-bottom: 2px solid #ecd551;
+            padding: 8px;
+            background: transparent;
+        }
+
+        textarea {
+            height: 50px;
+        }
+
+        input[type="submit"] {
+            background-color: #ecd551;
+            color: #232323;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d1b04a;
+        }
+
+        .me {
+      position: relative;
+      left: -620px;
+      top: 2000px;
+      height: 380px;
+      width: 348px;
+      z-index: 2;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  
+
+    <div class="hello-text" id="hello">
+      <span>H</span>ello!!
+    </div>
+
+  <div class="intro-text">
+    Arjun Here,<br><br>
+    I’m an interaction designer based in Bangalore with a passion for doodling, and I enjoy infusing that creative touch into my workflow and the products I create.
+  </div>
+
+  <nav>
+    <div style="font-family:'SF Pro Display 500', sans-serif;" class="nav-links">
+      <a href="#">About Me</a>
+      <a href="#projects">Projects!!</a>
+      <a href="#Contact">Contact Me</a>
+    </div>
+  </nav>
+
+  <div class="hobbies-text">
+    <span>H</span>OBBIES
+  </div>
+
+  <!-- Existing rectangles section -->
+  <div class="rectangles">
+    <div class="rectangle" id="rectangle1">
+      <img src="C:\Users\manuk\Downloads\art.png" alt="Image 1" class="hover-img" data-hover="C:\Users\manuk\Downloads\yeloow art.png" style="top: 120px; left: 25px; width: 100px; height: 100px;">
+      <div class="rectangle-text">
+        <span class="bold-text">Doodling</span><br>
+        I love doodling a lot let it be in my sketch book or on my laptop. I always find a little time to doodle
+      </div>
+    </div>
+
+    <div class="rectangle" id="rectangle2">
+      <img src="C:\Users\manuk\Downloads\musical-note.png"  alt="Image 2" class="hover-img" data-hover="C:\Users\manuk\Downloads\ywllow music.png" style="top: 130px; left: 25px; width: 100px; height: 100px;">
+      <div class="rectangle-text">
+        <span class="bold-text">Music</span><br>
+        I find solitude in listening its a fun escape from the work in hand at times.
+      </div>
+    </div>
+
+    <div class="rectangle" id="rectangle3">
+      <img src="C:\Users\manuk\Downloads\white game.png" alt="Image 3" class="hover-img" data-hover="C:\Users\manuk\Downloads\game yellow.png" style="top: 130px; left: 21px; width: 130px; height: 130;">
+      <div class="rectangle-text">
+        <span class="bold-text">Gaming</span><br>
+        Gaming is my escape. It helps me unwind after a long day.
+        </div>
+      </div>
+    </div>
+
+    <!-- Software section -->
+    <div class="Software">
+      <span>S</span>OFTWARE
+    </div>
+
+    <!-- Four equally spaced squares -->
+    <div class="software-squares">
+      <div class="software-square">
+        <img src="C:\Users\manuk\Downloads\photoshop (1).png" alt="Photoshop" class="hover-img" data-hover="C:\Users\manuk\Downloads\photoshop.png" style="width: 100%; height: 100%;">
+      </div>
+      <div class="software-square">
+        <img src="C:\Users\manuk\Downloads\ai black.png" alt="Illustrator" class="hover-img" data-hover="C:\Users\manuk\Downloads\illu clr.png" style="width: 100%; height: 100%;">
+      </div>
+      <div class="software-square">
+        <img src="C:\Users\manuk\Downloads\figma black.png" alt="Figma" class="hover-img" data-hover="C:\Users\manuk\Downloads\figma clr.png" style="width: 100%; height: 100%;">
+      </div>
+      <div class="software-square">
+        <img src="C:\Users\manuk\Downloads\after eff black.png" alt="After Effects" class="hover-img" data-hover="C:\Users\manuk\Downloads\ae clr.png" style="width: 100%; height: 100%;">
+      </div>
+    </div>
+
+
+
+    <div class="line"></div>
+    <div class="line2"></div>
+
+    <!-- Projects Section -->
+    <div class="projects-text" id="projects"> <!-- Added id="projects" here -->
+      <span>P</span>ROJECTS
+    </div>
+  
+   <!-- Box container with images -->
+    <div class="projects-boxes">
+      <!-- First row -->
+      <div class="project-box">
+        <a href="C:\Users\manuk\OneDrive\Desktop\Coding stuff\website\sahayasarigee.html" class="project-box"> 
+        <img src="sahaya.png" alt="Project 1" class="hover-img" data-hover="sahaya clr.png" ></a>
+      </div>
+      <div class="project-box">
+        <a href="zine.html" class="project-box"> 
+        <img src="zine 1.png" alt="Project 2" class="hover-img" data-hover="zine clr.png"> </a>
+      </div>
+      <div class="project-box">
+        <a href="Link 3" class="project-box"> 
+        <img src="C:\Users\manuk\Downloads\sihayak.png" alt="Project 3" class="hover-img" data-hover="C:\Users\manuk\Downloads\siha clr.png"> </a>
+      </div>
+
+      <!-- Second row -->
+      <div class="project-box">
+        <a href="Link 4" class="project-box"> 
+        <img src="C:\Users\manuk\Downloads\steam.png" alt="Project 4" class="hover-img" data-hover="C:\Users\manuk\Downloads\steam clr.png"> </a>
+      </div>
+      <div class="project-box">
+        <a href="Link 5" class="project-box"> 
+        <img src="C:\Users\manuk\Downloads\scriblle bw.png" alt="Project 5" class="hover-img" data-hover="C:\Users\manuk\Downloads\scriblle clr.png"> </a>
+      </div>
+      <div class="project-box">
+        <a href="Link 6" class="project-box"> 
+        <img src="C:\Users\manuk\Downloads\game des bw.png" alt="Project 6" class="hover-img" data-hover="C:\Users\manuk\Downloads\game des clr.png"> </a>
+      </div>
+    </div>
+
+    <div class="line3"></div>
+    <div class="line4"></div>
+
+    <img src="tigressss 1.png" class="tigres" alt="">
+
+    <div class="bottom-box"></div>
+
+
+    <div class="form-container" id="Contact">
+      <h2 class="form-title">Contact <span>Me</span></h2>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" placeholder="Your Message" required></textarea><br>
+        <input type="submit" value="Submit" onclick="showPopup()">
+      </form>
+    </div>
+
+    <img src="C:\Users\manuk\Downloads\illme.png" class="me" alt="">
+
+
+
+    <script>
+      // Script to handle hover images for rectangles and squares
+      const hoverImages = document.querySelectorAll('.hover-img');
+
+      hoverImages.forEach(img => {
+        const originalSrc = img.src;
+        const hoverSrc = img.getAttribute('data-hover');
+
+        // Hover event for image transition
+        img.parentElement.addEventListener('mouseenter', () => {
+          img.src = hoverSrc;
+        });
+
+        img.parentElement.addEventListener('mouseleave', () => {
+          img.src = originalSrc;
+        });
+      });
+      
+    </script>
+</body>
+</html>
